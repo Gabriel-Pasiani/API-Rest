@@ -1,6 +1,6 @@
 import dotenv from 'dotenv'
 import express from 'express'
-import homeRoutes from './src/routes/homeRoutes'
+import homeRoutes from './src/routes/homeRoutes.js'
 
 class App {
   constructor() {
