@@ -5,12 +5,11 @@ class HomeController {
     const novoAluno = await Aluno.create({
       nome: "Gabriel",
       sobrenome: "Pasiani",
-      email: "pasianig@gmail.com",
+      email: "teste@gmail.com",
       idade: 26,
       peso: 55,
       altura: 1.75,
     });
-
     res.json(novoAluno);
   }
 }

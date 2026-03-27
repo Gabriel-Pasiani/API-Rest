@@ -5,6 +5,6 @@ import Aluno from "../models/Aluno.js";
 
 const models = [Aluno];
 
-const connection = new Sequelize(databaseConfig)
+const connection = new Sequelize(databaseConfig);
 
-models.forEach(model => model.init(connection))
+models.forEach((model) => model.init(connection));

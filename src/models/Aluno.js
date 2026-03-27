@@ -1,4 +1,4 @@
-import Sequelize, { Model } from "sequelize";
+import Sequelize, { Model, DataTypes } from "sequelize";
 
 export default class Aluno extends Model {
   static init(sequelize) {
@@ -13,7 +13,7 @@ export default class Aluno extends Model {
       },
       {
         sequelize,
-      },
+      }
     );
     return this;
   }
