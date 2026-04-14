@@ -1,11 +1,19 @@
-import { Router } from 'express'
-import userController from '../controllers/UserController.js'
+import { Router } from "express";
+import userController from "../controllers/UserController.js";
+import loginRequired from "../middlewares/loginRequired.js";
 
-const router = new Router()
+const router = new Router();
 
-router.post('/', userController.store)
+// Não deveria existir
+ router.get("/", loginRequired, userController.index); // Lista usuários
+// router.get("/:id", userController.show); // Lista usuário
 
-export default router
+// Existiria
+router.post("/", loginRequired, userController.store);
+router.put("/", loginRequired, userController.update);
+router.delete("/", loginRequired, userController.delete);
+
+export default router;
 
 /*
 index -> Mostra todos os usuarios -> get
